@@ -37,7 +37,7 @@ namespace sc
         using namespace std::chrono_literals;
 
         m_dirs_to_search_in.push(dir);
-
+        std::cout<<"Searching in "<<dir.string()<<std::endl;
 
         while (!get_finished())
         {
@@ -208,7 +208,7 @@ namespace sc
         std::error_code error_code;
         std::stack<fs::path> dirs;
         dirs.push(ROOT);
-
+        std::cout<<"Searching in "<<dirs.top().string()<<std::endl;
         while (dirs.size())
         {
 
